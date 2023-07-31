@@ -1,5 +1,8 @@
 # Meet Features
 
+## Descrition
+Meet is a serverless, progressive web application built with React. Meet allows users to search and learn details about events around them.
+
 ## Feature 1: Filter Events by City. 
 **User Story:** As a user, I would like to be able to filter events by city so that I can see the list of events that take place in that city. 
 
@@ -91,6 +94,6 @@
 **User Story:** As a user, I would like to be able to see a chart showing the upcoming events in each city so that I know what events are organized in which city. 
 - **Scenario 1:** Show a chart with the number of upcoming events in each city.
 
-    + **Given:** The user is on the main page.
+    + **Given:** The user is on the main page and a city is not selected.
     + **When:** The user loads the events.
     + **Then:** A chart will be displayed to the user showing upcoming events in each city.
