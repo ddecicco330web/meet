@@ -105,8 +105,3 @@ module.exports.getCalendarEvents = async (event) => {
       };
     });
 };
-
-if (require.main === module) {
-  console.log('This is a test');
-  exports.getCalendarEvents();
-}
