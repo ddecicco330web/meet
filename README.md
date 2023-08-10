@@ -99,4 +99,4 @@ Meet is a serverless, progressive web application built with React. Meet allows 
     + **Then:** A chart will be displayed to the user showing upcoming events in each city.
 
 ## Serverless Functions
-Meet app will use serverless functions for OAuth authorization and use of the Google Calendar API. The app will also use serverless functions to have the front-end to make requests from the server like filtered events.
+Meet app will use serverless functions for OAuth authorization and use of the Google Calendar API. The app will also use serverless functions to have the front-end to make requests from the server like filtered events.new
