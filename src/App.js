@@ -8,7 +8,6 @@ import './App.css';
 
 const App = () => {
   const [events, setEvents] = useState([]);
-  // eslint-disable-next-line no-unused-vars
   const [currentNOE, setCurrentNOE] = useState(32);
   const [allLocations, setAllLocations] = useState([]);
   const [currentCity, setCurrentCity] = useState('See all cities');
@@ -25,13 +24,13 @@ const App = () => {
 
   useEffect(() => {
     fetchData();
-  }, [currentCity]);
+  }, [currentCity, currentNOE]);
 
   return (
     <div className="App">
       <CitySearch allLocations={allLocations} setCurrentCity={setCurrentCity} />
       <EventList events={events} />
-      <NumberOfEvents />
+      <NumberOfEvents setCurrentNOE={setCurrentNOE} />
     </div>
   );
 };
