@@ -32,6 +32,7 @@ const CitySearch = ({ allLocations, setCurrentCity }) => {
     <div id="city-search">
       <input
         type="text"
+        id="city-search"
         className="city"
         placeholder="Search for a city"
         value={query}
@@ -47,7 +48,7 @@ const CitySearch = ({ allLocations, setCurrentCity }) => {
               </li>
             );
           })}
-          <li onClick={handleItemClicked} key="See all cities">
+          <li onClick={handleItemClicked} key="See all cities" className="city">
             <b>See all cities</b>
           </li>
         </ul>
