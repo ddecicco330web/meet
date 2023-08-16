@@ -32,7 +32,6 @@ const CitySearch = ({ allLocations, setCurrentCity }) => {
     <div id="city-search">
       <input
         type="text"
-        id="city-search"
         className="city"
         placeholder="Search for a city"
         value={query}
