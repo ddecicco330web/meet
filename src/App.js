@@ -4,6 +4,7 @@ import CitySearch from './components/CitySearch';
 import NumberOfEvents from './components/NumberOfEvents';
 import { getEvents, extractLocations } from './api';
 import { InfoAlert, ErrorAlert, WarningAlert } from './components/Alert';
+import CityEventsChart from './components/CityEventsChart';
 
 import './App.css';
 
@@ -30,7 +31,7 @@ const App = () => {
     if (navigator.onLine) {
       setWarningAlert('');
     } else {
-      setWarningAlert('Currently offline. Using cahced data.');
+      setWarningAlert('Currently offline. Using cached data.');
     }
     fetchData();
   }, [currentCity, currentNOE]);
@@ -51,6 +52,7 @@ const App = () => {
         setCurrentNOE={setCurrentNOE}
         setErrorAlert={setErrorAlert}
       />
+      <CityEventsChart allLocations={allLocations} events={events} />
       <EventList events={events} />
     </div>
   );
