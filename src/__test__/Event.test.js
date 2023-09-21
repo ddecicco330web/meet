@@ -28,8 +28,10 @@ describe('<Event/> component', () => {
   });
 
   test('render start time', () => {
+    const dateTime = allEvents[0].start.dateTime.split('T');
+    const startTime = dateTime[1].substr(0, 5);
     expect(
-      EventComponent.queryByText(allEvents[0].created)
+      EventComponent.queryByText(`${dateTime[0] + ' at ' + startTime}`)
     ).toBeInTheDocument();
   });
 
