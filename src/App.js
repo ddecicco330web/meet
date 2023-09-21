@@ -39,25 +39,40 @@ const App = () => {
 
   return (
     <div className="App">
-      <div className="alerts-container">
-        {infoAlert.length ? <InfoAlert text={infoAlert} /> : null}
-        {errorAlert.length ? <ErrorAlert text={errorAlert} /> : null}
-        {warningAlert.length ? <WarningAlert text={warningAlert} /> : null}
+      <div className="header">
+        <img
+          src={process.env.PUBLIC_URL + '/meet-app-Logo.png'}
+          alt="Logo"
+          height={64}
+          width={128}
+        />
+        <CitySearch
+          allLocations={allLocations}
+          setCurrentCity={setCurrentCity}
+          setInfoAlert={setInfoAlert}
+        />
+
+        <div className="alerts-container">
+          {infoAlert.length ? <InfoAlert text={infoAlert} /> : null}
+          {errorAlert.length ? <ErrorAlert text={errorAlert} /> : null}
+          {warningAlert.length ? <WarningAlert text={warningAlert} /> : null}
+        </div>
       </div>
-      <CitySearch
-        allLocations={allLocations}
-        setCurrentCity={setCurrentCity}
-        setInfoAlert={setInfoAlert}
-      />
-      <NumberOfEvents
-        setCurrentNOE={setCurrentNOE}
-        setErrorAlert={setErrorAlert}
-      />
-      <div className="charts-container">
-        <EventGenresChart events={events} />
-        <CityEventsChart allLocations={allLocations} events={events} />
+
+      <div className="body">
+        <div className="charts-container">
+          <EventGenresChart events={events} />
+          <CityEventsChart allLocations={allLocations} events={events} />
+        </div>
+        <EventList events={events} />
       </div>
-      <EventList events={events} />
+
+      <div className="footer">
+        <NumberOfEvents
+          setCurrentNOE={setCurrentNOE}
+          setErrorAlert={setErrorAlert}
+        />
+      </div>
     </div>
   );
 };
