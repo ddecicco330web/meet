@@ -96,6 +96,7 @@ describe('<CitySearch /> component', () => {
 
       const CitySearchDOM = AppDOM.querySelector('#city-search');
       const cityTextBox = within(CitySearchDOM).queryByRole('textbox');
+
       await user.click(cityTextBox);
 
       const allEvents = await getEvents();
