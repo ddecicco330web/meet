@@ -38,17 +38,30 @@ const CitySearch = ({ allLocations, setCurrentCity, setInfoAlert }) => {
     setInfoAlert('');
   };
 
+  // document.body.addEventListener('click', (event) => {
+  //   const searchElement = document.querySelector('#city-search');
+  //   if (!searchElement.contains(event.target) && showSuggestions) {
+  //     setShowSuggestions(false);
+  //   }
+  // });
   return (
     <div id="city-search">
-      <input
-        type="text"
-        className="city"
-        placeholder="Search for a city"
-        value={query}
-        onFocus={() => setShowSuggestions(true)}
-        onBlur={() => setShowSuggestions(false)}
-        onChange={handleInputChanged}
-      />
+      <div className="search-container">
+        <img
+          className="icon"
+          src={process.env.PUBLIC_URL + '/search.png'}
+          alt="search"
+        />
+        <input
+          type="text"
+          className="city"
+          placeholder="Search for a city"
+          value={query}
+          onFocus={() => setShowSuggestions(true)}
+          onChange={handleInputChanged}
+        />
+      </div>
+
       {showSuggestions ? (
         <ul className="suggestions">
           {suggestions.map((suggestion) => {

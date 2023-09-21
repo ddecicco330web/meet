@@ -9,8 +9,26 @@ const Event = ({ event }) => {
   return (
     <li className="event">
       <h1>{event.summary}</h1>
-      <h4>{dateTime[0] + ' at ' + startTime}</h4>
-      <h4>{event.location}</h4>
+      <h4>
+        <div className="event-row">
+          <img
+            className="icon"
+            src={process.env.PUBLIC_URL + '/clock.svg'}
+            alt="clock icon"
+          />
+          {dateTime[0] + ' at ' + startTime}
+        </div>
+      </h4>
+      <h4>
+        <div className="event-row">
+          <img
+            className="icon"
+            src={process.env.PUBLIC_URL + '/location-icon.png'}
+            alt="location icon"
+          />
+          {event.location}
+        </div>
+      </h4>
       {showDetails ? (
         <div>
           <h4 className="description">{event.description}</h4>

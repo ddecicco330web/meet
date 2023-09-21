@@ -31,12 +31,6 @@
       "type": "image/png",
       "sizes": "193x65",
       "purpose": "any"
-    },
-    {
-      "src": "search.png",
-      "type": "image/png",
-      "sizes": "32x32",
-      "purpose": "any"
     }
   ],
   "start_url": ".",
