@@ -189,4 +189,8 @@ input[type='number'] {
   #city-search {
     margin-left: 0;
   }
+
+  text {
+    font-size: 10px;
+  }
 }
